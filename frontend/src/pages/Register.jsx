@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
 import {FaUser} from 'react-icons/fa';
+import SpinnerLayout from '../components/SpinnerLayout'
 import {useSelector, useDispatch} from 'react-redux';
 import {register, reset} from '../features/auth/authSlice';
 
@@ -16,7 +17,7 @@ const Register = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const {user, isError , isSuccess, message} = useSelector(state => state.auth);
+  const {user, isError, isLoading, isSuccess, message} = useSelector(state => state.auth);
 
   useEffect(() => {
     if(isError) {
@@ -52,6 +53,10 @@ const Register = () => {
 
       dispatch(register(userData))
     }
+  }
+
+  if(isLoading) {
+    return <SpinnerLayout/>
   }
 
   return (
