@@ -4,6 +4,7 @@ const {getTickets, getTicket, createTickets, deleteTicket, updateTicket} = requi
 
 const {protect} = require('../middleware/authMiddleware');
 
+
 router.route('/').get(protect, getTickets).post(protect, createTickets);
 router.route('/:id').get(protect, getTicket).delete(protect, deleteTicket).put(protect, updateTicket);
 
