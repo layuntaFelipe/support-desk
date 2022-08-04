@@ -1,4 +1,5 @@
-import {FaSignInAlt, FaSignOutAlt, FaUser, FaApple} from 'react-icons/fa';
+import {FaSignInAlt, FaSignOutAlt, FaUser} from 'react-icons/fa';
+import logoDesk from '../assets/logoDesk.png';
 import {Link, useNavigate} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import {logout, reset} from '../features/auth/authSlice';
@@ -16,8 +17,8 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <div className="logo">
-        <Link to='/'><FaApple/> Support Desk</Link>
+      <div className="logo" style={{position: 'relative'}}>
+        <Link to='/'><img src={logoDesk} alt="logo" style={{width: '1.8rem', position: 'relative', bottom: '-6px'}} /> Support Desk</Link>
       </div>
       <ul>
         {user ? (
