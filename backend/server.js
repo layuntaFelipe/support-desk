@@ -2,8 +2,8 @@ const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv').config();
 const colors = require('colors');
-const {errorHandler} = require('./middleware/errorMidleware');
-const {connectDB} = require('./config/db');
+const {errorHandler} = require(`${__dirname}/middleware/errorMidleware`);
+const {connectDB} = require(`${__dirname}/config/db`);
 const PORT = process.env.PORT || 5000;
 
 // Connect to database
@@ -20,8 +20,8 @@ app.get(`/`, (req, res) => {
 })
 
 //Routes
-app.use('/api/users', require('./routes/userRoutes'));
-app.use('/api/tickets', require('./routes/ticketRoutes'));
+app.use('/api/users', require(`${__dirname}/routes/userRoutes`));
+app.use('/api/tickets', require(`${__dirname}/routes/ticketRoutes`));
 
 // Serve Frontend
 if (process.env.NODE_ENV === 'production') {
