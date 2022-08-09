@@ -22,7 +22,7 @@ Check the website out at: https://supportdeskappleapp.herokuapp.com/
 - Creating User model, registering User to the database, and implementing JWT token to it;
 - Creating a protected function for routes with authentification checking;
 - Creating the Forms for Login and Register on frontend;
-- Use Redux for ;
+- Use Redux;
 - Creating Ticket model and routes;
 - Implementing the CRUD to the Ticket object;
 - Listing the Tickets to the UI;
