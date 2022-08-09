@@ -41,7 +41,7 @@ Check the website out at: https://supportdeskappleapp.herokuapp.com/
 ## Website Preview
 
 <p float="left">
-  <img align="center" src="https://github.com/layuntaFelipe/crypto-nummum/blob/master/screenshots/crypto-video-2.gif" alt="Demo" width="800"/> <br/><br/>
+  <img align="center" src="https://github.com/layuntaFelipe/support-desk/blob/master/screenshots/Screen%20Shot%202022-08-09%20at%201.40.37%20AM.png" alt="Demo" width="800"/> <br/><br/>
   <img align="center" src="https://github.com/layuntaFelipe/crypto-nummum/blob/master/screenshots/home.png" alt="Web first page" width="500"/> <br/><br/>
   <img align="center" src="https://github.com/layuntaFelipe/crypto-nummum/blob/master/screenshots/crypto-home-2.png" alt="Web first page" width="500"/> <br/><br/>
     <img align="center" src="https://github.com/layuntaFelipe/crypto-nummum/blob/master/screenshots/crypto-home-3.png" alt="Web second page" width="500"/>
