@@ -3,27 +3,24 @@
   <h1 align="center">Apple Support Desk</h1>
 </p>
 
-Crypto-Nummum is a simple Crypto API web page with a clean design that helps you navigate and get to know more about your favorite crypto.
+Apple Support Desk is a React app mainly focused on the backend side of a project. It consists of simple actions of a customer can register and login into my MongoDB database, then it can create a ticket informing which devices are not working correctly, and describe what is the problem.
+
+The user can check out his ticket and send messages to the staff about the ticket as well, and once the problem is solved, the user can close the ticket.
+
+This project was great for me to learn more about NodeJS, MongoDB, Express, buiilding a backend, and work with libraries I've never worked with, like BCrypt, and Jsonwebtoken.
 
 Check the website out on: https://crypto-nummum.vercel.app/
-## About the API used
-
-For this project I used the CoinGecko API, a very easy going no key API, with clean documentation and HTTPS. <br />
-With the heelp of this API, you get all the market information about all the cryptos out there in the world. From the most known one like: Bitcoin, to Baby Doge Coin
 
 ## Roadmap
 
 - Understand how the CoinGecko API works
-- Layout the design for the page
-- Use Axios to get the data from the API
-- Use UseState and UseEffect to store and load the data from the API to their own components
-- Use React-Router-Dom to link the home page to the specific coin page.
-- Finish styling website to perfection
 
 
 ## Tech Stack
-
-**Client:** React, Axios, React-Router-Dom
+<img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/reactjs_logo_icon_168875.png" alt="ReactJS" width="40" height="40" style="max-width:100%;"></img>
+<img src="https://img.icons8.com/fluency/344/node-js.png" alt="NodeJS" width="40" height="40" style="max-width:100%;"></img>
+<img src="https://img.icons8.com/color/344/mongodb.png" alt="MongoDB" width="40" height="40" style="max-width:100%;"></img>
+<img src="https://cdn.iconscout.com/icon/free/png-256/express-2-282577.png" alt="Express" width="40" height="40" style="max-width:100%;"></img>
 
 
 ## Website Preview
@@ -38,4 +35,9 @@ With the heelp of this API, you get all the market information about all the cry
 
 ## Acknowledgements
 
- - [Coin Gecko](https://github.com/coingecko)
+ - [bcryptjs](https://github.com/coingecko)
+ - [concurrently]
+ - [express]
+ - [jsonwebtoken]
+ - [mongoose]
+ - [nodemon]
