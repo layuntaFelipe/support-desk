@@ -9,25 +9,25 @@ Apple Support Desk is a MERN app mainly focused on the backend side of a project
 
 The user can check out his ticket and send messages to the staff about the ticket as well, and once the problem is solved, the user can close the ticket.
 
-This project was great for me to learn more about NodeJS, MongoDB, Express, and Redux, buiilding a backend, and work with libraries I've never worked with, like BCrypt, and Jsonwebtoken.
+This project was great for me to learn more about NodeJS, MongoDB, Express, and Redux, build a backend, and work with libraries I've never worked with, like BCrypt, and Jsonwebtoken.
 
-Check the website out on: https://supportdeskappleapp.herokuapp.com/
+Check the website out at: https://supportdeskappleapp.herokuapp.com/
 
 ## Roadmap
 
-- Setting up MongoDB data, and settigns;
+- Setting up MongoDB data, and setting;
 - Setting up Server files and Express;
 - Adding Routes, Controllers, and Handling Errors;
 - Connecting Database and testing;
-- Creating User model, register User to database, and implementing JWT token to it;
-- Creating an protected function for routes with authentification checking;
-- Creating the Forms for Login and Register on frontent;
+- Creating User model, registering User to the database, and implementing JWT token to it;
+- Creating a protected function for routes with authentification checking;
+- Creating the Forms for Login and Register on frontend;
 - Use Redux for ;
-- Creating Ticket model, and routes;
+- Creating Ticket model and routes;
 - Implementing the CRUD to the Ticket object;
 - Listing the Tickets to the UI;
-- Creating Notes model, and routes;
-- Listing the Notes on the parrent ticket;
+- Creating Notes model and routes;
+- Listing the Notes on the parent ticket;
 
 
 ## Tech Stack
