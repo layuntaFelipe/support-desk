@@ -15,6 +15,18 @@ const createTicket = async (ticketData, token) => {
  return response.data;
 }
 
+// Get all tickets
+const getAllTickets = async (token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+
+    const response = await axios.get(API_URL + '/all', config);
+    return response.data;
+}
+
 // Get users tickets
 const getTickets = async (token) => {
  const config = {
@@ -57,6 +69,7 @@ const closeTicket = async (ticketId, token) => {
 const ticketService = {
  createTicket,
  getTickets,
+ getAllTickets,
  getTicket,
  closeTicket
 }

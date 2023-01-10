@@ -5,6 +5,28 @@ const Ticket = require('../models/ticketModel');
 const { reset } = require('nodemon');
 
 // @desc    Get user tickets
+// @route   GET /api/tickets/all
+// @access  Private
+const getAllTickets = asyncHandler( async (req, res) => {
+    // Get user using the id and the jwt
+    const user = await User.findById(req.user.id);
+
+    if(!user) {
+        res.status(401);
+        throw Error('User not found');
+    }
+
+    if(!user.isAdmin) {
+        res.status(401);
+        throw Error('User not admin');
+    }
+
+    const tickets = await Ticket.find();
+
+    res.status(200).json(tickets);
+});
+
+// @desc    Get user tickets
 // @route   GET /api/tickets
 // @access  Private
 const getTickets = asyncHandler( async (req, res) => {
@@ -40,12 +62,19 @@ const getTicket = asyncHandler( async (req, res) => {
   throw Error('Ticket not found');
  }
 
- if(ticket.user.toString() !== req.user.id){
-  res.status(401);
-  throw Error('Not Authorized');
+ if((req.user.isAdmin) || (ticket.user.toString() == req.user.id)){
+    res.status(200).json(ticket);
+ }else {
+    res.status(401);
+    throw Error('Not Authorized');
  }
 
- res.status(200).json(ticket);
+//  if((ticket.user.toString() !== req.user.id)){
+//   res.status(401);
+//   throw Error('Not Authorized');
+//  }
+
+    // res.status(200).json(ticket);
 });
 
 // @desc    Create a new ticket
@@ -91,14 +120,13 @@ const deleteTicket = asyncHandler( async (req, res) => {
   throw Error('Ticket not found');
  }
 
- if(ticket.user.toString() !== req.user.id){
-  res.status(401);
-  throw Error('Not Authorized');
+ if((req.user.isAdmin) || (ticket.user.toString() == req.user.id)){
+    await ticket.remove();
+    res.status(200).json({success: true});
+ }else {
+    res.status(401);
+    throw Error('Not Authorized');
  }
-
- await ticket.remove();
-
- res.status(200).json({success: true});
 });
 
 // @desc    Delete user single ticket
@@ -120,20 +148,20 @@ const updateTicket = asyncHandler( async (req, res) => {
   throw Error('Ticket not found');
  }
 
- if(ticket.user.toString() !== req.user.id){
-  res.status(401);
-  throw Error('Not Authorized');
+ if((req.user.isAdmin) || (ticket.user.toString() == req.user.id)){
+    const updatedTicket = await Ticket.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    res.status(200).json(updatedTicket);
+ }else {
+    res.status(401);
+    throw Error('Not Authorized');
  }
-
- const updatedTicket = await Ticket.findByIdAndUpdate(req.params.id, req.body, {new: true})
-
- res.status(200).json(updatedTicket);
 });
 
 module.exports = {
  getTickets,
  createTickets,
  getTicket,
+ getAllTickets,
  deleteTicket,
  updateTicket
 }
